@@ -1,0 +1,44 @@
+// MIT License - See https://github.com/AddedInnovation/nf-toolkit-chrome-extension/blob/master/LICENSE for details
+// Copyright (c) 2017 Added Innovation LLC
+
+{
+  "manifest_version": 2,
+
+  "name": "Added Innovation - Netforum Toolkit Chrome Extension",
+  "description": "This extension shows the underlying metadata for a form control",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "css": [ "ai-toolkit-chrome-extension.css" ], // "content/bootstrap.min.css",
+      "js": [ "scripts/jquery-3.1.1.js", "scripts/bootstrap.min.js", "scripts/jquery.soap.js", "scripts/jquery.xml2json.js", "ai-toolkit-chrome-extension.js" ],
+      "matches": [ "http://ec2-54-91-83-71.compute-1.amazonaws.com/*" ],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  //"options_ui": {
+  //  // Required.
+  //  "page": "options.html",
+  //  // Recommended.
+  //  "chrome_style": true
+  //  // Not recommended; only provided for backwards compatibility,
+  //  // and will be unsupported in a future version of Chrome (TBD).
+  //  //"open_in_tab": true
+  //},
+  "permissions": [
+    "activeTab",
+    "*://*/*web/*",
+    "storage"
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+
+}
