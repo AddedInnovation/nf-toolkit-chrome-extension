@@ -6,20 +6,36 @@
 
   "name": "Added Innovation - Netforum Toolkit Chrome Extension",
   "description": "This extension shows the underlying metadata for a form control",
+  //version of the extension
   "version": "1.0",
 
+
   "browser_action": {
+    //the icon you see in the toolbar
     "default_icon": "icon128.png"
   },
+  //the stuff that shows up on the page
   "content_scripts": [
     {
-      "css": [ "ai-toolkit-chrome-extension.css" ], // "content/bootstrap.min.css",
-      "js": [ "scripts/jquery-3.1.1.js", "scripts/bootstrap.min.js", "scripts/jquery.soap.js", "scripts/jquery.xml2json.js", "ai-toolkit-chrome-extension.js" ],
-      "matches": [ "http://ec2-54-91-83-71.compute-1.amazonaws.com/*" ],
+      //add these css files
+      "css": [ "ai-toolkit-chrome-extension.css" ],
+      //add these javascript files - had to load jquery and bootstrap even though netFORUM already loads them for some reason
+      "js": [
+        "scripts/jquery-3.1.1.js", //base jQuery - needed it even though netFORUM already has it
+        "scripts/bootstrap.min.js", //base bootstrap - needed it even though netFORUM already has it
+        "scripts/jquery.soap.js", //used to call xWeb Soap methods via jQuery
+        "scripts/jquery.xml2json.js", //used to convert xml response from xWeb calls to JSON
+        "ai-toolkit-chrome-extension.js" // our extension!!!!
+      ],
+      //load on both iWeb and eWeb
+      "matches": [ "*://*/iweb/", "*://*/eweb/" ],
+      //run at the end so the page is available in our scripts
       "run_at": "document_end",
+      //run even in iframe "modals"
       "all_frames": true
     }
   ],
+  //TODO: Add options so people can enter their xWeb URL and xWeb Credentials via UI
   //"options_ui": {
   //  // Required.
   //  "page": "options.html",
@@ -29,11 +45,12 @@
   //  // and will be unsupported in a future version of Chrome (TBD).
   //  //"open_in_tab": true
   //},
+  //What the extension has access to
   "permissions": [
     "activeTab",
-    "*://*/*web/*",
-    "storage"
+    "*://*/*web/*"
   ],
+  //the icons that are available for the extension
   "icons": {
     "16": "icon16.png",
     "32": "icon32.png",

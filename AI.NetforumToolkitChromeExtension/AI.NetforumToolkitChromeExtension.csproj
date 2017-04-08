@@ -73,6 +73,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="icon128.png" />
+    <Content Include="icon16.png" />
     <Content Include="icon32.png" />
     <Content Include="icon48.png" />
     <Content Include="packages.config" />

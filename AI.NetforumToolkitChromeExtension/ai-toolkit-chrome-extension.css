@@ -1,28 +1,31 @@
 ﻿/* MIT License - See https://github.com/AddedInnovation/nf-toolkit-chrome-extension/blob/master/LICENSE for details */
 /* Copyright (c) 2017 Added Innovation LLC */
 
+/* give the form controls a green border */
 .ai-toolkit-extension-control:hover {
     border: .25px solid #008142 !important;
 }
-
+/* make the form control data left-aligned instead of the default right*/
 .ai-toolkit-extension-control-popover {
     text-align: left !important;
 }
 
+    /* baseline netFORUM clears out a lot of the regular bootstrap stuff - put the padding back */
     .ai-toolkit-extension-control-popover .form-horizontal .form-control-static {
-        /*white-space: nowrap;*/
         padding: 2px 0 2px 0 !important;
     }
-
+    /* baseline netFORUM clears out a lot of the regular bootstrap stuff - put the padding and bold back */
     .ai-toolkit-extension-control-popover .form-horizontal .control-label {
         padding: 2px 15px 0 15px !important;
         font-weight: bold;
     }
+/* the default popover is very small - give it a little more room! */
 .popover.ai-toolkit-extension-control-popover{ /*/http://stackoverflow.com/a/25326809/575278*/
     max-width:500px;
     width:500px;
 }
 
+/* put the "Adding Innovation" button in the top right of the screen */
 #extension-on-off {
     cursor: pointer;
     position: fixed;
