@@ -28,7 +28,7 @@
         "ai-toolkit-chrome-extension.js" // our extension!!!!
       ],
       //load on both iWeb and eWeb
-      "matches": [ "*://*/iweb/", "*://*/eweb/" ],
+      "matches": [ "*://*/iWeb/*", "*://*/iweb/*", "*://*/eWeb/*", "*://*/eweb/*" ], //match patterns are case-sensitive
       //run at the end so the page is available in our scripts
       "run_at": "document_end",
       //run even in iframe "modals"
