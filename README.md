@@ -15,7 +15,6 @@ Chrome Extension to expose form control data quickly and easily
   - Modify the xWebUserName, xWebPassword, and xWebUrl variables for your environment
   - Save ai-toolkit-chrome-extension.js with your changes
 + Install Chrome Extension
-  - Open {extracted content location}\nf-toolkit-chrome-extension-master\AI.NetforumToolkitChromeExtension\ folder in Windows Explorer or Visual Studio
   - Open Google Chrome
   - Click on Options Elipsis on toolbar
   - Click More Tools, then Extensions
