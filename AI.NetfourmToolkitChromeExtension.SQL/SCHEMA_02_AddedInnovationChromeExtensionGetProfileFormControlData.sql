@@ -22,12 +22,12 @@ BEGIN
 	SET NOCOUNT ON;
 
     SELECT md_dynamic_form_control.*, obj_name, obj_key, dyn_description, dyn_designed, md_dynamic_form_extension.*
-	FROM md_dynamic_profile_detail
-		JOIN md_dynamic_form ON dpd_content_form_key = dyn_key
-		JOIN md_dynamic_form_control ON dyn_key = dys_dyn_key
+	FROM md_dynamic_profile_detail (NOLOCK)
+		JOIN md_dynamic_form (NOLOCK) ON dpd_content_form_key = dyn_key
+		JOIN md_dynamic_form_control (NOLOCK) ON dyn_key = dys_dyn_key
 		   JOIN md_object (NOLOCK)
 		   on obj_key = dyn_obj_key
-			LEFT JOIN md_dynamic_form_extension ON ((dyn_key = dyx_dyn_key AND dys_control_name = dyx_control_id) OR (dyn_obj_key = dyx_obj_key AND dys_control_name = dyx_control_id)) AND dyx_delete_flag = 0
+			LEFT JOIN md_dynamic_form_extension (NOLOCK) ON ((dyn_key = dyx_dyn_key AND dys_control_name = dyx_control_id) OR (dyn_obj_key = dyx_obj_key AND dys_control_name = dyx_control_id)) AND dyx_delete_flag = 0
 		  WHERE dpd_dyn_key = @FormKey
 			AND dyn_delete_flag = 0
 			AND dys_delete_flag = 0

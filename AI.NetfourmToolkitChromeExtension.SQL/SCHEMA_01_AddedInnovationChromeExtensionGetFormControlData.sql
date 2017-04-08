@@ -24,10 +24,10 @@ BEGIN
 
     SELECT md_dynamic_form_control.*, obj_name, obj_key, dyn_description, dyn_designed, md_dynamic_form_extension.*
 	   FROM md_dynamic_form (NOLOCK)
-	   JOIN md_dynamic_form_control ON dyn_key = dys_dyn_key
+	   JOIN md_dynamic_form_control (NOLOCK) ON dyn_key = dys_dyn_key
 	   JOIN md_object (NOLOCK)
 	   on obj_key = dyn_obj_key
-		LEFT JOIN md_dynamic_form_extension ON ((dyn_key = dyx_dyn_key AND dys_control_name = dyx_control_id) OR (dyn_obj_key = dyx_obj_key AND dys_control_name = dyx_control_id)) AND dyx_delete_flag = 0
+		LEFT JOIN md_dynamic_form_extension (NOLOCK) ON ((dyn_key = dyx_dyn_key AND dys_control_name = dyx_control_id) OR (dyn_obj_key = dyx_obj_key AND dys_control_name = dyx_control_id)) AND dyx_delete_flag = 0
 	  WHERE dyn_key = @FormKey
 		AND dyn_delete_flag = 0
 		AND dys_delete_flag = 0
