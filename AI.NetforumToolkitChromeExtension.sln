@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AI.NetforumToolkitChromeExtension", "AI.NetforumToolkitChromeExtension\AI.NetforumToolkitChromeExtension.csproj", "{B116F227-0B66-41E4-8B5D-845FD5AF1ED4}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AI.NetfourmToolkitChromeExtension.SQL", "AI.NetfourmToolkitChromeExtension.SQL\AI.NetfourmToolkitChromeExtension.SQL.sqlproj", "{A857A591-5C72-45FA-B45A-BDEBAA097015}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,12 @@ Global
 		{B116F227-0B66-41E4-8B5D-845FD5AF1ED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B116F227-0B66-41E4-8B5D-845FD5AF1ED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B116F227-0B66-41E4-8B5D-845FD5AF1ED4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A857A591-5C72-45FA-B45A-BDEBAA097015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A857A591-5C72-45FA-B45A-BDEBAA097015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A857A591-5C72-45FA-B45A-BDEBAA097015}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A857A591-5C72-45FA-B45A-BDEBAA097015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A857A591-5C72-45FA-B45A-BDEBAA097015}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A857A591-5C72-45FA-B45A-BDEBAA097015}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
